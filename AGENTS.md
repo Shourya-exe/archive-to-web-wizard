@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Catalog data (services, prices, business facts, FAQ) lives only in `src/lib/catalog.ts`; pages read from it so business values change in one place.
+- Cart and bookings are client-side (`src/lib/cart.tsx`, localStorage) until Lovable Cloud is enabled; move them to the database rather than adding a second store.

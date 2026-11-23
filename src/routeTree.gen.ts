@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BookingsRouteImport } from './routes/bookings'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as CustomProjectsRouteImport } from './routes/custom-projects'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as JoinAsProRouteImport } from './routes/join-as-pro'
+import { Route as PmRouteImport } from './routes/pm'
+import { Route as WarrantyRouteImport } from './routes/warranty'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as ServicesCategoryRouteImport } from './routes/services.$category'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BookingsRoute = BookingsRouteImport.update({
+  id: '/bookings',
+  path: '/bookings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CustomProjectsRoute = CustomProjectsRouteImport.update({
+  id: '/custom-projects',
+  path: '/custom-projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JoinAsProRoute = JoinAsProRouteImport.update({
+  id: '/join-as-pro',
+  path: '/join-as-pro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PmRoute = PmRouteImport.update({
+  id: '/pm',
+  path: '/pm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WarrantyRoute = WarrantyRouteImport.update({
+  id: '/warranty',
+  path: '/warranty',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesCategoryRoute = ServicesCategoryRouteImport.update({
+  id: '/services/$category',
+  path: '/services/$category',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/bookings': typeof BookingsRoute
+  '/checkout': typeof CheckoutRoute
+  '/custom-projects': typeof CustomProjectsRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/join-as-pro': typeof JoinAsProRoute
+  '/pm': typeof PmRoute
+  '/warranty': typeof WarrantyRoute
+  '/services/$category': typeof ServicesCategoryRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/bookings': typeof BookingsRoute
+  '/checkout': typeof CheckoutRoute
+  '/custom-projects': typeof CustomProjectsRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/join-as-pro': typeof JoinAsProRoute
+  '/pm': typeof PmRoute
+  '/warranty': typeof WarrantyRoute
+  '/services/$category': typeof ServicesCategoryRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/bookings': typeof BookingsRoute
+  '/checkout': typeof CheckoutRoute
+  '/custom-projects': typeof CustomProjectsRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/join-as-pro': typeof JoinAsProRoute
+  '/pm': typeof PmRoute
+  '/warranty': typeof WarrantyRoute
+  '/services/$category': typeof ServicesCategoryRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/bookings'
+    | '/checkout'
+    | '/custom-projects'
+    | '/how-it-works'
+    | '/join-as-pro'
+    | '/pm'
+    | '/warranty'
+    | '/services/$category'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/bookings'
+    | '/checkout'
+    | '/custom-projects'
+    | '/how-it-works'
+    | '/join-as-pro'
+    | '/pm'
+    | '/warranty'
+    | '/services/$category'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/bookings'
+    | '/checkout'
+    | '/custom-projects'
+    | '/how-it-works'
+    | '/join-as-pro'
+    | '/pm'
+    | '/warranty'
+    | '/services/$category'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BookingsRoute: typeof BookingsRoute
+  CheckoutRoute: typeof CheckoutRoute
+  CustomProjectsRoute: typeof CustomProjectsRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  JoinAsProRoute: typeof JoinAsProRoute
+  PmRoute: typeof PmRoute
+  WarrantyRoute: typeof WarrantyRoute
+  ServicesCategoryRoute: typeof ServicesCategoryRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bookings': {
+      id: '/bookings'
+      path: '/bookings'
+      fullPath: '/bookings'
+      preLoaderRoute: typeof BookingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/custom-projects': {
+      id: '/custom-projects'
+      path: '/custom-projects'
+      fullPath: '/custom-projects'
+      preLoaderRoute: typeof CustomProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/join-as-pro': {
+      id: '/join-as-pro'
+      path: '/join-as-pro'
+      fullPath: '/join-as-pro'
+      preLoaderRoute: typeof JoinAsProRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pm': {
+      id: '/pm'
+      path: '/pm'
+      fullPath: '/pm'
+      preLoaderRoute: typeof PmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/warranty': {
+      id: '/warranty'
+      path: '/warranty'
+      fullPath: '/warranty'
+      preLoaderRoute: typeof WarrantyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/$category': {
+      id: '/services/$category'
+      path: '/services/$category'
+      fullPath: '/services/$category'
+      preLoaderRoute: typeof ServicesCategoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BookingsRoute: BookingsRoute,
+  CheckoutRoute: CheckoutRoute,
+  CustomProjectsRoute: CustomProjectsRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  JoinAsProRoute: JoinAsProRoute,
+  PmRoute: PmRoute,
+  WarrantyRoute: WarrantyRoute,
+  ServicesCategoryRoute: ServicesCategoryRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

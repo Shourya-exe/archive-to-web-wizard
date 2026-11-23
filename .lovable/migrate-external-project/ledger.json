@@ -1,0 +1,7 @@
+[
+ {"capability":"code","source":"7 static .dc.html design screens","outcome":"rebuilt as TanStack routes: /, /services, /services/$category, /checkout, /bookings, /custom-projects, /pm, plus /how-it-works, /warranty, /join-as-pro","status":"done","next_action":"none"},
+ {"capability":"schema/records/auth","source":"none - static designs, no database or users","outcome":"not applicable","status":"accepted","next_action":"none"},
+ {"capability":"payments","source":"Razorpay mentioned in checkout copy only, no integration","outcome":"UI only, simulated confirm; cart/bookings in browser storage","status":"pending","next_action":"user decides on Lovable Cloud + Razorpay"},
+ {"capability":"file uploads","source":"custom project form (UI only)","outcome":"client-side file list","status":"pending","next_action":"needs Cloud storage for real uploads"},
+ {"capability":"verification","source":"-","outcome":"playwright: add to cart, checkout validation, booking+OTP, PM OTP verify; no console errors; no horizontal overflow at 390px on 9 routes; header fits at 1440px","status":"done","next_action":"none"}
+]
